@@ -1,0 +1,74 @@
+{% include 'homecommon.html' %}
+
+<br>
+<br>
+
+
+
+<div class="container">
+<form action="{% url 'register_save' %}" method="post">
+    {% csrf_token %}
+
+<table class="table table-hover">
+    <tr align="center">
+        <th>
+            <h5 class="text-center display-4" >REGISTER</h5>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input class="bg-light" type="text" placeholder="Name :" name="name" style="width: 100%" required>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input class="bg-light" type="number" placeholder="Age :" name="ag" style="width: 100%"required>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input class="bg-light" type="number" placeholder="Contact no :" name="cno" style="width: 100%" required>
+        </th>
+    </tr>
+    <tr>
+        <th>Gender :
+            <input class="bg-light" type="radio"  name="g" value="male" checked>Male
+            <input class="bg-light" type="radio"  name="g" value="female">Female
+              <input class="bg-light" type="radio"  name="g" value="others">others
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input class="bg-light" type="text" placeholder="Username :" name="u_name" style="width: 100%" required>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input class="bg-light" type="password" placeholder="Password :" name="u_pass" style="width: 100%" required>
+        </th>
+    </tr>
+    <tr align="center">
+        <th>
+        <button type="submit" class="btn btn-primary">REGISTER</button>
+        </th>
+    </tr>
+</table>
+</form>
+</div>
+
+
+{% for x in messages %}
+    <td>
+        <div class="alert alert-warning" role="alert" align="center">
+          {{ x }}
+        </div>
+    </td>
+{% endfor %}
+
+
+<hr class="featurette-divider">
+    <footer class="container my-5">
+        <p class="float-right"><a   href="#">Back to top</a></p>
+        <p>© 2020-2021 Developer Station, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>Developer- <a href="#">Sagar Yadav</a></p>
+    </footer>

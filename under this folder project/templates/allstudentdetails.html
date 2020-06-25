@@ -1,0 +1,41 @@
+{% include 'admincommon.html' %}
+<div class="container mt-4" >
+<div style="text-align: center">
+
+<table class="table table-hover table-responsive-lg" id="example" border="2" >
+    <tr align="center">
+        <th>NAME</th> <th>AGE</th> <th>CONTACT</th> <th>GENDER</th> <th>USERNAME</th><th>DELETE</th>
+    </tr>
+{% for x in data %}
+
+
+    <tr align="center"  >
+            <th>{{ x.name }}</th>
+            <th>{{ x.age }}</th>
+            <th>{{ x.contact }}</th>
+            <th>{{ x.gender }}</th>
+            <th>{{ x.username }}
+
+            </th>
+        <form action="{% url 'allstudentdetails_delete' %}" method="post">
+            {% csrf_token %}
+            <th><input type="hidden" value="{{ x.username }}" name="d1">
+                <button type="submit" class="btn btn-danger">DELETE</button>
+            </th>
+        </form>
+    </tr>
+
+
+{% endfor %}
+</table>
+</div>
+</div>
+
+
+
+<hr class="featurette-divider">
+    <footer class="container my-5">
+        <p class="float-right"><a   href="#">Back to top</a></p>
+        <p>© 2020-2021 Developer Station, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>Developer- <a href="#">Sagar Yadav</a></p>
+    </footer>

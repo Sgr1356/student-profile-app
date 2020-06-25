@@ -1,0 +1,18 @@
+footer{
+
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   background-color: rgba(0,0,0,0.86);
+   color: white;
+   text-align: left;
+   border-radius: 10px;
+   padding: 10px;
+}
+.mynav{
+   border-radius: 10px;
+}
+.topnav{
+   border-radius: 10px;
+}

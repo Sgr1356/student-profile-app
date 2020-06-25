@@ -1,0 +1,67 @@
+{% include 'studentcommon.html' %}
+<br>
+
+<div class="container">
+<div style="text-align: center">
+<table class="table table-hover">
+    <tr align="center"  >
+        <th colspan="3" >
+            <h5 class="display-4"> {{ name |upper }} PROFILE</h5>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            NAME
+        </th>
+        <th class="bg-light">
+            :
+        </th>
+        <th>
+            {{ data.name }}
+        </th>
+    </tr>
+    <tr>
+        <th>
+            AGE
+        </th>
+        <th class="bg-light">
+            :
+        </th>
+        <th>
+            {{ data.age }}
+        </th>
+    </tr>
+    <tr>
+        <th>
+            CONTACT NO
+        </th>
+        <th class="bg-light">
+            :
+        </th>
+        <th>
+            {{ data.contact }}
+        </th>
+    </tr>
+    <tr>
+        <th>
+            GENDER
+        </th>
+        <th class="bg-light">
+            :
+        </th>
+        <th>
+            {{ data.gender }}
+        </th>
+    </tr>
+
+</table>
+</div>
+</div>
+
+
+<hr class="featurette-divider">
+    <footer class="container my-5">
+        <p class="float-right"><a   href="#">Back to top</a></p>
+        <p>© 2020-2021 Developer Station, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>Developer- <a href="#">Sagar Yadav</a></p>
+    </footer>
